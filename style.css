@@ -6,48 +6,56 @@
   outline: 0;
 }
 
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Telex", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   background: linear-gradient(to right, #371d51, #9b52e4);
-  color: white;
-  height: 100vh;
+  color: rgb(255, 255, 255);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  margin-top: 70px;
+}
+
+.hero-section {
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  position: relative;
+  text-align: center;
 }
 
 .texto-conteudo {
-  max-width: 500px;
-  margin-right: 300px;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 30px; /* Reduzido para mobile */
   color: white;
   text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff, 3px 3px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
 h1 span {
-  font-size: 44px;
-  display: inline;
+  font-size: 28px; /* Ajustado para mobile */
 }
 
 p {
-  margin: 20px 0;
-  font-size: 20px;
-  font-family: "Telex", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 button {
@@ -59,44 +67,64 @@ button {
   font-size: 18px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 20px;
 }
 button:hover {
   background: linear-gradient(to right, #371d51, #9b52e4);
 }
 
 .image-header {
-  position: relative;
-  width: 350px;
-  height: 700px;
-  margin-left: 50px;
+  width: 250px; /* Ajuste para telas menores */
+  height: 500px; /* Ajuste proporcional */
+  margin-top: 20px;
 }
 
 .image-header img {
-  position: absolute;
-  max-width: 100%;
-  top: 0;
-  left: 0;
-}
-
-/*tem que arrumar*/
-.fundo-colorido {
-  z-index: 2;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
 }
 
 .celular {
-  position: fixed;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
-  height: 98%;
-  border-radius: 50px;
+  height: 40px;
 }
 
 .celular-carcaca {
-  position: fixed;
-  z-index: 4;
-  border-radius: 49px;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+/* Media Queries para Tablets e Desktops */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+  h1 span {
+    font-size: 36px;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .texto-conteudo {
+    max-width: 500px;
+    text-align: left;
+  }
+  .image-header {
+    width: 350px;
+    height: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 54px;
+  }
+  h1 span {
+    font-size: 40px;
+  }
+  .container {
+    max-width: 1200px;
+  }
 }/*# sourceMappingURL=style.css.map */
