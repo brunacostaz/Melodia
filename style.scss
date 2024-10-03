@@ -48,7 +48,7 @@ body {
 }
 
 h1 {
-  font-size: 30px; /* Reduzido para mobile */
+  font-size: 30px; 
   color: white;
   text-shadow:
     2px 2px 0px #ff00ff,
@@ -58,7 +58,7 @@ h1 {
 }
 
 h1 span {
-  font-size: 28px; /* Ajustado para mobile */
+  font-size: 28px;
 }
 
 p {
@@ -83,31 +83,33 @@ button {
 }
 
 .image-header {
-  width: 250px; /* Ajuste para telas menores */
-  height: 500px; /* Ajuste proporcional */
+  width: 250px; 
+  height: 500px; 
   margin-top: 20px;
 }
 
-.image-header img {
-  width: 100%;
-  height: 100%;
-}
-
 .celular {
+  position: relative;
   z-index: 1;
   width: 100%;
-  height: 40px;
-
+  height: 100%; 
+  left: 1px;
 }
 
 .celular-carcaca {
+  position: absolute; 
+  top: 1; 
+  left: 0;
+  width: 100%; 
+  height: 74%; 
+  border-radius: 49px; 
   z-index: 2; 
-  margin-bottom: ;
 }
 
 
+
 /* Media Queries para Tablets e Desktops */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 48px;
   }
@@ -127,15 +129,27 @@ button {
     text-align: left;
   }
 
-  .image-header {
-    width: 350px;
-    height: 700px;
+  .celular {
+    position: none; 
+    top: 0;
+    left: 0;
+    width: 225px;
+    bottom: 70px;
   }
+
+  .celular-carcaca {
+    position: none;
+    top: 0;
+    left: 77%;
+    width: 200px
+  }
+  
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1150px) {
   h1 {
     font-size: 54px;
+  
   }
 
   h1 span {
@@ -144,5 +158,17 @@ button {
 
   .container {
     max-width: 1200px;
+  }
+
+  .celular {
+    position: none; 
+    width: 225px;
+    left: 0;
+  }
+
+  .celular-carcaca {
+    position: none; 
+    left: 37.6%;
+
   }
 }
