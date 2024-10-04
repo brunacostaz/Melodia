@@ -104,12 +104,12 @@
   text-align: center;
 }
 .feedback-section h2 {
-  color: #280849; /* Cor do texto */
-  text-align: center; /* Centraliza o texto na tela */
-  font-size: 36px; /* Tamanho da fonte */
-  font-weight: bold; /* Deixa o texto em negrito */
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
-  margin: 20px 0; /* Espaçamento acima e abaixo */
+  color: #280849;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
   font-size: 30px;
 }
 .feedback-section .feedback-container {
@@ -330,21 +330,26 @@ button:hover {
   margin-left: 20%;
 }
 
-.grid-item:nth-child(2), .grid-item:nth-child(3) {
+.grid-item:nth-child(2), .grid-item:nth-child(3), .grid-item:nth-child(6) {
   background-color: #8b7ca3;
 }
 
 .grid-item:nth-child(6) {
-  background-color: #8b7ca3;
+  width: 90%;
+  margin-left: 10%;
 }
 
 .grid-item:nth-child(3) {
-  width: 199%;
+  width: 160%;
+}
+
+.grid-item:nth-child(5) {
+  width: 120%;
 }
 
 .grid-item:nth-child(4) {
-  width: 50%;
-  margin-left: 50%;
+  width: 70%;
+  margin-left: 30%;
 }
 
 .img-grid {
@@ -362,7 +367,31 @@ button:hover {
   color: #8568A3;
 }
 
+/*celular*/
 @media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: auto;
+  }
+  .grid-item {
+    width: 100%;
+    margin-left: 0;
+    height: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3),
+  .grid-item:nth-child(4),
+  .grid-item:nth-child(5),
+  .grid-item:nth-child(6) {
+    width: 100%;
+    margin-left: 0;
+  }
   .beneficios {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -439,7 +468,7 @@ button:hover {
     max-width: 90%;
   }
 }
-/* Media Queries para Tablets e Desktops */
+/*Tablets*/
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row;
