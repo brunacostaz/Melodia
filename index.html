@@ -8,71 +8,156 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="body">
     <header class="hero-section">
         <div class="container">
             <div class="texto-conteudo">
-                <h1>MELODIA:<br> <span>Sua Música, Sua Forma</span></h1>
-                <p>Faça do movimento uma parte da sua vida diária com exercícios curtos e fáceis</p>
-                <button>OUVIR AGORA</button>
+                <h1 class="titulo-melodia">MELODIA:<br> <span>Sua Música, Sua Forma</span></h1>
+                <p class="paragra-header">Faça do movimento uma parte da sua vida diária com exercícios curtos e fáceis</p>
+                <button class="button-melodia">OUVIR AGORA</button>
             </div>
             <div class="image-header">
-                <img class="celular" src="./img/celular.svg" alt="Celular">
+                <img class="celular" src="img/celular.svg" alt="Celular">
             </div>
         </div>
     </header>
     <main class="principal">
-        <section class="primeira-section">
-            <!-- Conteúdo da primeira seção -->
-        </section>
-        <!--Feedback dos usuários-->
+        <section class="beneficios-section">
+            <div class="beneficios">
+            <div class="icon-card">
+                <i class="fa-solid fa-icons"></i>
+                <h2 class="titulo-card">Playlists Exclusivas</h2>
+                <div class="texto-beneficios">
+                    <p>Encontre playlists prontas para cada momento do seu dia, desde o relaxamento até a festa.</p>
+                </div>
+            </div>
+            <div class="icon-card">
+                <i class="fas fa-wifi"></i>
+                <h2 class="titulo-card">Modo Offline</h2>
+                <div class="texto-beneficios">
+                    <p>Baixe suas músicas favoritas e ouça mesmo sem internet, ideal para quem está sempre em movimento.</p>
+                </div>
+            </div>
+            <div class="icon-card">
+                <i class="fas fa-hashtag"></i>
+                <h2 class="titulo-card">Conexão com Redes Sociais</h2>
+                <div class="texto-beneficios">
+                    <p>Compartilhe suas descobertas musicais com amigos diretamente para suas redes sociais.</p>
+                </div>
+            </div>
+        </div>
+          </section>
+
+
+        <!--playlist-->
+
+        <section class="suas-playlist">
+            <h1 class="titulo-playlist">Suas Playlists</h1>
+            <p class="para-plyalist">Adicione playlists prontas para cada momento</p>
+            <div class="grid-container">
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="img/breakheart.svg" alt="Imagem" class="img-grid">
+                <div class="text-container">
+                  <h2 class="item-title">Break Heart</h2>
+                  <p class="item-subtitle">LOVE</p>
+                  <p class="add-to-playlist" id="addToPlaylist">Adicionar à Playlist</p>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+          
+        <!--feedback-->
         <section class="feedback-section">
             <h2>Feedback dos Usuários</h2>
             <div class="feedback-container">
                 <div class="feedback-card">
-                    <img src="./img/usuario1.svg" alt="Usuário 1" class="feedback-avatar">
+                    <img src="img/usuario1.svg" alt="Usuário 1" class="feedback-avatar">
                     <p>"O Melodia mudou a forma como descubro novas músicas! A interface é incrível e as recomendações sempre acertam em cheio."</p>
                     <h3>Lucas Mendes</h3>
                 </div>
                 <div class="feedback-card">
-                    <img src="./img/usuario2.svg" alt="Usuário 2" class="feedback-avatar">
+                    <img src="img/usuario2.svg" alt="Usuário 2" class="feedback-avatar">
                     <p>"O Melodia mudou a forma como descubro novas músicas! A interface é incrível e as recomendações sempre acertam em cheio."</p>
                     <h3>Fernanda Oliveira</h3>
                 </div>
                 <div class="feedback-card">
-                    <img src="./img/usuario3.svg" alt="Usuário 3" class="feedback-avatar">
+                    <img src="img/usuario3.svg" alt="Usuário 3" class="feedback-avatar">
                     <p>"O Melodia mudou a forma como descubro novas músicas! A interface é incrível e as recomendações sempre acertam em cheio."</p>
                     <h3>Camila Rodrigues</h3>
                 </div>
             </div>
         </section>
-        
-        <!--Formulário para contato-->
+
+        <!--formulario-->
+        <h2 class="titulo-contato">Contato</h2>
         <section class="contato-section">
-            <div class="container">
-                <div class="imagem-coluna">
-                    <img src="./img/contato.svg" alt="Menina criando um mural de led" class="imagem-contato">
-                </div>
+            <div class="imagem-coluna">
+                <img src="img/contato.svg" alt="Menina criando um mural de led" class="imagem-contato">
+            </div>
+            <div class="container-contato">
                 <div class="formulario-coluna">
-                    <h2>Contato</h2>
                     <form>
                         <div class="form-group">
-                            <label for="nome">Nome</label>
+                            <label for="nome">Nome Completo:</label>
                             <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" placeholder="Seu email" required>
                         </div>
                         <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
+                            <label for="mensagem">Mensagem:</label>
                             <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button class="button-contato" type="submit">Enviar</button>
                     </form>
                 </div>
             </div>
         </section>
+        
+     <!--formulario-->
+
     </main>
     <footer>
         <div class="footer-container text-center">
@@ -120,9 +205,13 @@
                 <p>Telefone: (11) 91234-5678</p>
             </div>
         </div>
+        <div class="linha"></div>
         <div class="copyright text-center">
+            <p><a href="#" class="privacy-link">Política de privacidade</a></p>
             <p>Melodia &copy; 2024. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
