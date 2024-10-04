@@ -86,7 +86,7 @@ Com esse projeto conseguimos reforçar o conhecimento básico da semântica do H
 - [@brunacostaz](https://github.com/brunacostaz)
 - [@AliAndrea1](https://github.com/AliAndrea1)
 - [@Laurasdc](https://github.com/Laurasdc)
-- Felipe
+- [@lzFelipee](https://github.com/lzFelipee)
 - [@sofiafernandes857](https://github.com/sofiafernandes857)
 
 
