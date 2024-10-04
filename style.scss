@@ -393,6 +393,107 @@ button:hover {
   color: $form-color; 
 }
 
+/*Offline*/
+.offline-section { 
+  text-align: center;
+  padding: 30px 20px; // Diminui o padding para reduzir o tamanho do fundo cinza
+  margin-top: 50px; // Adiciona espaço acima da seção
+  background-color: #E6DBF2; // Cor de fundo
+  border-radius: 30px;
+
+  .titulo-offline {
+      font-size: 2em;
+      color: $titulos;
+      text-align: center;
+      font-weight: bold; 
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); 
+      margin: 20px 0; 
+      font-size: 30px;
+  }
+
+  .paragrafo-offline {
+      font-size: 1.2em;
+      color: #4C4C4C; // Cor do parágrafo
+      margin-bottom: 30px;
+  }
+
+  .offline-playlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .offline-item {
+          display: flex;
+          align-items: center;
+          width: 90%;
+          max-width: 500px;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 20px; // Arredondamento das bordas
+          background-color: #D8BFD8; // Cor de fundo
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+          .offline-image {
+              width: 100px;
+              height: 100px;
+              margin-right: 10px;
+              border-radius: 10px;
+          }
+
+          .offline-info {
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+
+              .offline-title {
+                  font-size: 1.2em;
+                  color: #5C2E91; // Cor do título
+                  margin: 0;
+              }
+
+              .offline-artist {
+                  font-size: 0.9em;
+                  color: #4C4C4C; // Cor do artista
+                  margin: 0;
+              }
+
+              .offline-duration {
+                  font-size: 0.8em;
+                  color: #4C4C4C; // Cor da duração
+                  margin-top: 5px;
+              }
+          }
+
+          .offline-play {
+              font-size: 1.5em;
+              color: #4C4C4C; // Cor do ícone de play
+              margin-left: 10px;
+              cursor: pointer;
+          }
+
+          .progress-bar {
+              width: 100%;
+              height: 4px;
+              background: #E6E6E6;
+              border-radius: 2px;
+              margin-top: 10px;
+              position: relative;
+
+              .progress {
+                  width: 0;
+                  height: 100%;
+                  background: #5C2E91;
+                  border-radius: 2px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+              }
+          }
+      }
+  }
+}
+
+
 /*celular*/
 @media screen and (max-width: 768px) {
   .grid-container {

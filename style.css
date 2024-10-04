@@ -63,7 +63,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 30px !important;
-  background: linear-gradient(45deg, #5410ca, #9213e9);
+  background: linear-gradient(45deg, rgb(84.1244813278, 16.2821576763, 201.7178423237), rgb(146.0869565217, 19.4782608696, 232.5217391304));
   color: white;
   font-size: 18px;
   transition: background 0.3s ease;
@@ -367,6 +367,94 @@ button:hover {
   color: #8568A3;
 }
 
+/*Offline*/
+.offline-section {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+  background-color: #E6DBF2;
+  border-radius: 30px;
+}
+.offline-section .titulo-offline {
+  font-size: 2em;
+  color: #280849;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  font-size: 30px;
+}
+.offline-section .paragrafo-offline {
+  font-size: 1.2em;
+  color: #4C4C4C;
+  margin-bottom: 30px;
+}
+.offline-section .offline-playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.offline-section .offline-playlist .offline-item {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #D8BFD8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.offline-section .offline-playlist .offline-item .offline-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.offline-section .offline-playlist .offline-item .offline-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.offline-section .offline-playlist .offline-item .offline-info .offline-title {
+  font-size: 1.2em;
+  color: #5C2E91;
+  margin: 0;
+}
+.offline-section .offline-playlist .offline-item .offline-info .offline-artist {
+  font-size: 0.9em;
+  color: #4C4C4C;
+  margin: 0;
+}
+.offline-section .offline-playlist .offline-item .offline-info .offline-duration {
+  font-size: 0.8em;
+  color: #4C4C4C;
+  margin-top: 5px;
+}
+.offline-section .offline-playlist .offline-item .offline-play {
+  font-size: 1.5em;
+  color: #4C4C4C;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.offline-section .offline-playlist .offline-item .progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #E6E6E6;
+  border-radius: 2px;
+  margin-top: 10px;
+  position: relative;
+}
+.offline-section .offline-playlist .offline-item .progress-bar .progress {
+  width: 0;
+  height: 100%;
+  background: #5C2E91;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*celular*/
 @media screen and (max-width: 768px) {
   .grid-container {
@@ -557,4 +645,6 @@ button:hover {
     flex: 1;
     margin: 0 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
