@@ -1,8 +1,9 @@
-$primary-color: #371d51;
+$primary-color: #371d51;    
 $secondary-color: #9b52e4;
 $button-gradient-start: #6b20ed;
 $button-gradient-end: #a840ef;
-@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
   margin: 0;
@@ -17,18 +18,19 @@ body, html {
 }
 
 body {
-  font-family: "Telex", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: normal;
   background: linear-gradient(to right, $primary-color, $secondary-color);
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 0;
 }
 
+/* Primeira Seção (Hero Section) */
 .hero-section {
   margin: auto;
   padding: 20px;
@@ -69,7 +71,7 @@ p {
 button {
   padding: 10px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 30px !important;
   background: linear-gradient(45deg, darken($button-gradient-start, 10%), darken($button-gradient-end, 10%));
   color: white;
   font-size: 18px;
@@ -86,89 +88,239 @@ button {
   width: 250px; 
   height: 500px; 
   margin-top: 20px;
+  position: relative;
 }
 
 .celular {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%; 
-  left: 1px;
+  z-index: 1;
 }
 
 .celular-carcaca {
   position: absolute; 
-  top: 1; 
+  top: 0; 
   left: 0;
   width: 100%; 
-  height: 74%; 
+  height: 100%; 
   border-radius: 49px; 
-  z-index: 2; 
 }
 
+/* Seção de Contato */
+.contato-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Alinha as colunas para ocupar toda a altura */
+  padding: 40px 0;
+  width: 100%;
+  height: auto; /* Muda para auto para ocupar o espaço necessário */
+  background-color: transparent; /* Mantém o fundo transparente para a seção de contato */
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Alinha os itens para ocupar toda a altura */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .imagem-coluna {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+
+      .imagem-contato {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .formulario-coluna {
+      flex: 1;
+      padding: 20px;
+
+      h2 {
+        color: #343a40; /* Cor do título */
+      }
+
+      form {
+        .form-group {
+          label {
+            color: #343a40; /* Cor dos rótulos */
+          }
+
+          input, textarea {
+            background-color: rgba(0, 0, 0, 0.1); /* Cor do fundo dos campos */
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+          }
+        }
+
+        button {
+          background-color: #007bff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      background-color: transparent; /* Fundo transparente em telas menores */
+    }
+
+    .formulario-coluna {
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .imagem-coluna, .formulario-coluna {
+      flex: unset;
+      width: 100%;
+    }
+  }
+}
 
 /* Media Queries para Tablets e Desktops */
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 48px;
   }
-
+  
   h1 span {
     font-size: 36px;
   }
-
+  
   .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; /* Altera a direção do layout para desktop */
   }
 
+  .formulario-coluna {
+    margin-right: 20px; /* Margem à direita para espaçamento */
+    max-width: 400px; /* Limita a largura do formulário */
+  }
+
+  .imagem-coluna {
+    max-width: 300px; /* Reduz o tamanho da imagem no desktop */
+  }
+  
   .texto-conteudo {
     max-width: 500px;
     text-align: left;
   }
-
-  .celular {
-    position: none; 
-    top: 0;
-    left: 0;
-    width: 225px;
-    bottom: 70px;
-  }
-
-  .celular-carcaca {
-    position: none;
-    top: 0;
-    left: 77%;
-    width: 200px
+  
+  .image-header {
+    width: 400px; 
+    height: 700px;
   }
   
+  .celular {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .celular-carcaca {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-@media screen and (min-width: 1150px) {
-  h1 {
-    font-size: 54px;
-  
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column; // Organiza os elementos em coluna
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: white;
+  width: 100%; // Garante que o footer ocupe 100% da largura da tela
+
+  .footer-container {
+    display: flex;
+    flex-direction: column; // Inicialmente em coluna para dispositivos móveis
+    align-items: center; // Centraliza os itens
+    gap: 10px; // Diminui o espaço entre os itens
+
+    .linkedin, .contact-box {
+      width: 90%; // Ajusta a largura das seções
+      max-width: 400px; // Largura máxima para as caixas
+      text-align: center; // Centraliza o texto
+    }
+
+    .linkedin {
+      p {
+        font-weight: bold; // Destaque para o título
+      }
+
+      a {
+        display: flex; // Alinha ícone e texto
+        align-items: center; // Centraliza verticalmente
+        margin: 5px 0; // Margem entre os links
+        color: white; // Cor do texto
+        text-decoration: none; // Remove sublinhado
+
+        i {
+          margin-right: 5px; // Espaçamento entre ícone e texto
+          font-size: 16px; // Tamanho do ícone
+        }
+
+        &:hover {
+          color: #ccc; // Muda a cor no hover
+        }
+      }
+    }
+
+    .contact-box {
+      background-color: rgba(255, 255, 255, 0.1); // Cor de fundo semi-transparente
+      border-radius: 8px; // Bordas arredondadas
+      padding: 15px; // Espaçamento interno
+
+      h4 {
+        margin-bottom: 10px; // Margem abaixo do título
+        font-weight: bold; // Destaque para o título
+      }
+
+      p {
+        margin: 5px 0; // Margem entre as linhas de contato
+      }
+    }
   }
 
-  h1 span {
-    font-size: 40px;
+  .copyright {
+    margin-top: 20px; // Espaçamento acima dos direitos autorais
+    font-size: 12px; // Tamanho da fonte dos direitos autorais
+    color: #ccc; // Cor dos direitos autorais
   }
+}
 
-  .container {
-    max-width: 1200px;
-  }
+/* Media Queries para Tablets e Desktops */
+@media screen and (min-width: 1150px) { 
+  footer {
+    .footer-container {
+      flex-direction: row; // Exibe os elementos em linha
+      justify-content: center; // Centraliza os itens
 
-  .celular {
-    position: none; 
-    width: 225px;
-    left: 0;
-  }
-
-  .celular-carcaca {
-    position: none; 
-    left: 37.6%;
-
+      .linkedin, .contact-box {
+        flex: 1; // Faz os boxes ocuparem espaço igual
+        margin: 0 10px; // Margem horizontal entre os boxes
+      }
+    }
   }
 }

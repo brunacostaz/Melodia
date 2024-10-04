@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melodia: Sua Música, Sua Forma</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="hero-section">
@@ -15,20 +17,90 @@
                 <button>OUVIR AGORA</button>
             </div>
             <div class="image-header">
-               <img class="celular" src="img/celular.svg" alt="Celular">
-                <img class="celular-carcaca" src="img/celular carcaça 1.svg" alt="Carcaça do Celular">
+                <img class="celular" src="./img/celular.svg" alt="Celular">
             </div>
         </div>
-
     </header>
     <main class="principal">
         <section class="primeira-section">
-
+            <!-- Conteúdo da primeira seção -->
+        </section>
+        <!--Formulário para contato-->
+        <section class="contato-section">
+            <div class="container">
+                <div class="imagem-coluna">
+                    <img src="./img/contato.svg" alt="Menina criando um mural de led" class="imagem-contato">
+                </div>
+                <div class="formulario-coluna">
+                    <h2>Contato</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
-
     <footer>
-
+        <div class="footer-container text-center">
+            <div class="linkedin mb-4">
+                <p>Siga-nos nas redes sociais:</p>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/ali-andrea-0b41522ab/?trk=opento_sprofile_topcard" target="_blank">
+                                    <i class="fab fa-linkedin"></i> Ali Andrea
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/bruna-candeias-566a18269/" target="_blank">
+                                    <i class="fab fa-linkedin"></i> Bruna Candeias
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/laurasdc/" target="_blank">
+                                    <i class="fab fa-linkedin"></i> Laura Souza
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/luiz-felipe-motta-748bb0199/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                                    <i class="fab fa-linkedin"></i> Luis Felipe
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.linkedin.com/in/sofia-fernandes-f/" target="_blank">
+                                    <i class="fab fa-linkedin"></i> Sofia Fernandes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box mb-4">
+                <h4>Informações de Contato</h4>
+                <p>Email: melodia@gmail.com</p>
+                <p>Telefone: (11) 91234-5678</p>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>Melodia &copy; 2024. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
