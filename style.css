@@ -64,7 +64,7 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 30px !important;
-  background: linear-gradient(45deg, rgb(84.1244813278, 16.2821576763, 201.7178423237), rgb(146.0869565217, 19.4782608696, 232.5217391304));
+  background: linear-gradient(45deg, #5410ca, #9213e9);
   color: white;
   font-size: 18px;
   cursor: pointer;
@@ -98,6 +98,45 @@ button:hover {
   width: 100%;
   height: 100%;
   border-radius: 49px;
+}
+
+.feedback-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+}
+.feedback-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.feedback-section .feedback-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.feedback-section .feedback-container .feedback-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.feedback-section .feedback-container .feedback-card .feedback-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.feedback-section .feedback-container .feedback-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.feedback-section .feedback-container .feedback-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 /* Seção de Contato */
@@ -274,6 +313,4 @@ footer .copyright {
     flex: 1;
     margin: 0 10px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
