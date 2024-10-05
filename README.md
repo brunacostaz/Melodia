@@ -24,6 +24,9 @@ Decidimos utilizar como cores principais uma palheta com tons de roxo e branco, 
 Por fim, nosso projeto contém imagens e ícones para ilustrar o aplicativo e as músicas, formulário para contato,  alguns grids e responsividade.
 Utilizamos o Bootstrap para nos auxiliar principalmente na estruturação do nosso projeto. Incorporamos uma estilização personalizada com o scss para trazer uma identidade visual única para a landing page e o HTML para a criação do projeto. 
 
+## GitHub Pages
+
+https://brunacostaz.github.io/Melodia/
 
 ## Stack utilizada
 
