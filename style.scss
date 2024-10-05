@@ -119,19 +119,16 @@ $icon-color: #B197FC;
 }
 /* para aqui a Primeira Seção (Hero Section) */
 
+.titulo-feedback{
+  color: $titulos; 
+  font-size: 29px; 
+  font-weight: bold; 
+  text-shadow: $box-shadow; 
+  margin: 10px 0; 
+}
 .feedback-section {
   padding: 40px 0;
   text-align: center;
-
-  h2 {
-    color: $titulos; 
-    text-align: center; 
-    font-size: 36px; 
-    font-weight: bold; 
-    text-shadow: $box-shadow; 
-    margin: 20px 0; 
-    font-size: 30px;
-  }
 
 .feedback-container {
     display: flex;
@@ -493,9 +490,141 @@ button:hover {
   }
 }
 
+/*compartilhar*/
+
+.compartilhar {
+  margin-top: 2%;
+  background-color: #b8afc9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.titulo-compartilhar{
+  color: $titulos; 
+  font-size: 30px; 
+  font-weight: bold; 
+  text-shadow: $box-shadow; 
+  margin: 10px 0; 
+}
+
+.section-compartilhar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.img-compartilhar img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+.player {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: white !important;
+  border-radius: 2px;
+  margin-top: 10px;
+  position: relative;
+
+  .progress {
+      width: 0;
+      height: 100%;
+      background: #5C2E91;
+      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+}
+.share {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.share label {
+  font-size: 1.2em;
+  color: #4C4C4C;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.share a button {
+  background-color: #5C2E91; /* Cor de fundo padrão */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.share a {
+  text-decoration: none;
+}
+
+.share a button:hover {
+  background-color: #4C1F7C; /* Mudança de cor ao passar o cursor */
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+/* Cores específicas para cada botão */
+.share a:nth-child(2) button { /* Facebook */
+  background-color: #3b5998;
+}
+
+.share a:nth-child(2) button:hover {
+  background-color: #2d4373;
+}
+
+.share a:nth-child(3) button { /* Instagram */
+  background-color: #E4405F;
+}
+
+.share a:nth-child(3) button:hover {
+  background-color: #d62454;
+}
+
+.share a:nth-child(4) button { /* WhatsApp */
+  background-color: #25D366;
+}
+
+.share a:nth-child(4) button:hover {
+  background-color: #20b255;
+}
+
+.duracao-compartilhar{
+  margin-top: 10%;
+} 
+
 
 /*celular*/
 @media screen and (max-width: 768px) {
+  .compartilhar {
+    margin-top: 2%;
+    background-color: #e6d8ff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+
   .grid-container {
     grid-template-columns: 1fr; 
     width: 90%; 

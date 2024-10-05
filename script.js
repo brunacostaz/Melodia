@@ -12,14 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const audioSrc = button.getAttribute('data-audio');
             let audio = document.querySelector(`audio[data-audio="${audioSrc}"]`);
 
-            // Se o elemento de áudio não existir, crie um novo
             if (!audio) {
                 audio = document.createElement('audio');
                 audio.src = audioSrc;
                 audio.setAttribute('data-audio', audioSrc);
                 document.body.appendChild(audio);
 
-                // Atualiza a barra de progresso
                 const progressBar = button.parentElement.querySelector('.progress');
 
                 audio.addEventListener('timeupdate', function() {
@@ -34,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // Controle da reprodução do áudio
             if (audio.paused) {
-                // Pausar todos os outros áudios
                 document.querySelectorAll('audio').forEach(a => {
                     if (a !== audio) {
                         a.pause();
@@ -49,13 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
 
-                // Atualizar ícones de todos os botões para "play"
                 playButtons.forEach(btn => {
                     btn.classList.remove('fa-pause-circle');
                     btn.classList.add('fa-play-circle');
                 });
 
-                // Tocar o áudio atual e atualizar o ícone para "pause"
                 audio.play();
                 button.classList.remove('fa-play-circle');
                 button.classList.add('fa-pause-circle');
@@ -66,5 +60,27 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-});
 
+    const backButtons = document.querySelectorAll('.fa-backward-step');
+    const forwardButtons = document.querySelectorAll('.fa-forward-step');
+
+    backButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const audio = document.querySelector('.fa-pause-circle');
+            if (audio) {
+                const currentAudio = document.querySelector(`audio[data-audio="${audio.getAttribute('data-audio')}"]`);
+                currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 10); // Retroceder 10 segundos
+            }
+        });
+    });
+
+    forwardButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const audio = document.querySelector('.fa-pause-circle');
+            if (audio) {
+                const currentAudio = document.querySelector(`audio[data-audio="${audio.getAttribute('data-audio')}"]`);
+                currentAudio.currentTime = Math.min(currentAudio.duration, currentAudio.currentTime + 10); // Avançar 10 segundos
+            }
+        });
+    });
+});
