@@ -1,9 +1,11 @@
-document.querySelectorAll('.add-to-playlist').forEach(function(element) {
+// Adiciona evento de clique para adicionar à playlist
+document.querySelectorAll('.add-to-playlist').forEach(function(element) { 
     element.addEventListener('click', function() {
         alert('Adicionado à playlist!'); 
     });
 });
 
+// Aguarda o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", function() {
     const playButtons = document.querySelectorAll('.offline-play');
 
@@ -82,5 +84,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentAudio.currentTime = Math.min(currentAudio.duration, currentAudio.currentTime + 10); // Avançar 10 segundos
             }
         });
+    });
+
+    // Função para adicionar/remover a classe 'transparent' ao navbar
+    const navbar = document.querySelector('.navbar');
+    const heroSection = document.querySelector('.hero-section');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > heroSection.offsetHeight) {
+            navbar.classList.add('transparent');
+        } else {
+            navbar.classList.remove('transparent');
+        }
     });
 });
